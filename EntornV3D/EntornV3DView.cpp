@@ -203,6 +203,8 @@ BEGIN_MESSAGE_MAP(CEntornV3DView, CView)
 		ON_UPDATE_COMMAND_UI(ID_OBJECTE_PAISATGE, &CEntornV3DView::OnUpdateObjectePaisatge)
 		ON_COMMAND(ID_PROJECCIO_ORTOGRAFICA, &CEntornV3DView::OnProjeccioOrtografica)
 		ON_UPDATE_COMMAND_UI(ID_PROJECCIO_ORTOGRAFICA, &CEntornV3DView::OnUpdateProjeccioOrtografica)
+		ON_COMMAND(ID_PROJECCIO_AXONOMETRICA, &CEntornV3DView::OnProjeccioAxonometrica)
+		ON_UPDATE_COMMAND_UI(ID_PROJECCIO_AXONOMETRICA, &CEntornV3DView::OnUpdateProjeccioAxonometrica)
 		END_MESSAGE_MAP()
 
 // Construcción o destrucción de CEntornV3DView
@@ -902,8 +904,11 @@ void CEntornV3DView::OnPaint()
 		glViewport(0, 0, w, h);
 
 		// Aquí farem les crides per a definir Viewport, Projecció i Càmara: INICI -------------------------
-
-		// Aquí farem les cridesper a definir Viewport, Projecció i Càmara:: FI -------------------------
+		Projeccio_Orto(0, 0, w, h, OPV.R);
+		Vista_Esferica(OPV, Vis_Polar, pan, tr_cpv, tr_cpvF, c_fons, col_obj, objecte, mida,
+			front_faces, oculta, test_vis, back_line,
+			ilumina, llum_ambient, llumGL, ifixe, ilum2sides, eixos, grid, hgrid);
+		// Aquí farem les crides per a definir Viewport, Projecció i Càmara:: FI -------------------------
 				// Dibuixar Model (escena)
 		glPushMatrix();
 		configura_Escena();     // Aplicar Transformacions Geometriques segons persiana Transformacio i configurar objectes
@@ -4345,7 +4350,6 @@ void CEntornV3DView::OnUpdateProjeccioOrtografica(CCmdUI* pCmdUI)
 	else pCmdUI->SetCheck(0);
 }
 
-
 /* ------------------------------------------------------------------------- */
 /*					7. OBJECTE					                             */
 /* ------------------------------------------------------------------------- */
@@ -5815,4 +5819,21 @@ int CEntornV3DView::llegir_ptsC(char* nomf)
 	return i;
 }
 
+void CEntornV3DView::OnProjeccioAxonometrica()
+{
+	// TODO: Agregue aquí su código de controlador de comandos
+	projeccio = AXONOM;
+	eixos = true;
+	mobil = true;			zzoom = true;
 
+	// Crida a OnPaint() per redibuixar l'escena
+	InvalidateRect(NULL, false);
+}
+
+
+void CEntornV3DView::OnUpdateProjeccioAxonometrica(CCmdUI* pCmdUI)
+{
+	// TODO: Agregue aquí su código de controlador de IU para actualización de comandos
+	if (projeccio == ORTO) pCmdUI->SetCheck(1);
+	else pCmdUI->SetCheck(0);
+}

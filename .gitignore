@@ -474,3 +474,5 @@ FodyWeavers.xsd
 
 # Projecte de V3D que vull compartir al seu propi repo
 **/Visualitzacio/Practiques/**
+
+/compile_commands.json

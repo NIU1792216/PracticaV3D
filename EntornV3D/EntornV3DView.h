@@ -441,6 +441,9 @@ public:
 	afx_msg void OnUpdateObjectePaisatge(CCmdUI* pCmdUI);
 	afx_msg void OnProjeccioOrtografica();
 	afx_msg void OnUpdateProjeccioOrtografica(CCmdUI* pCmdUI);
+	afx_msg void OnUpdateProjeccio(CCmdUI* pCmdUI);
+	afx_msg void OnProjeccioAxonometrica();
+	afx_msg void OnUpdateProjeccioAxonometrica(CCmdUI* pCmdUI);
 };
 
 #ifndef _DEBUG  // Versión de depuración en EntornV3DView.cpp

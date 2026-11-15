@@ -294,7 +294,7 @@ switch (prj) {
 		up[0] = 0.; up[1] = 0.; up[2] = 1.;
 		break;
 
-		case 3: //Isometrica
+		case 3: //Axonometrica
 		cam[0] = Raux; cam[1] = Raux; cam[2] = Raux;
 		up[0] = -1; up[1] = -1; up[2] = 2;
 		break;
