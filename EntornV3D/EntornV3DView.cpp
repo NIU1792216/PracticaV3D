@@ -939,7 +939,7 @@ void CEntornV3DView::OnPaint()
 		// les quatre vistes ortogràfiques
 		// ---------- Entorn V3D: DESCOMENTAR QUAN S'IMPLEMENTI PROJECCIO ORTOGRÀFICA
 
-		// PLANTA (Inferior Esquerra)
+		// PLANTA (Inferior Esquerra) 
 				// Definició de Viewport, Projecció i Càmara
 		Projeccio_Orto(0, 0, w/2 -2, h/2 -2, OPV.R);
 		Vista_Ortografica(0, OPV.R, c_fons, col_obj, objecte, mida, front_faces, oculta,
