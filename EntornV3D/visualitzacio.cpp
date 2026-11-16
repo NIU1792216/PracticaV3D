@@ -280,23 +280,23 @@ void Vista_Ortografica(int prj,GLfloat Raux,CColor col_fons,CColor col_object,ch
 GLdouble cam[3], up[3];
 switch (prj) {
 		case 1: // Alçat
-		cam[0] = 0.; cam[1] = Raux; cam[2] = 0.;
-		up[0] = 0.; up[1] = 0.; up[2] = 1.;
+		cam[0] = 0.; cam[1] = 0.; cam[2] = Raux;
+		up[0] = 1.; up[1] = 0.; up[2] = 0.;
 		break;
 
 		case 0: // Planta
-		cam[0] = 0.; cam[1] = 0.0; cam[2] = Raux;
-		up[0] = 0.; up[1] = -1.; up[2] = 0.;
+		cam[0] = Raux; cam[1] = 0.; cam[2] = 0.;
+		up[0] = 0.; up[1] = 0.; up[2] = -1.;
 		break;
 
 		case 2: // Perfil
-		cam[0] = Raux; cam[1] = 0.; cam[2] = 0.;
-		up[0] = 0.; up[1] = 0.; up[2] = 1.;
+		cam[0] = 0.; cam[1] = Raux; cam[2] = 0.;
+		up[0] = 1.; up[1] = 0.; up[2] = 0.;
 		break;
 
 		case 3: //Axonometrica
 		cam[0] = Raux; cam[1] = Raux; cam[2] = Raux;
-		up[0] = -1; up[1] = -1; up[2] = 2;
+		up[0] = 2; up[1] = -1; up[2] = -1;
 		break;
 	}
 

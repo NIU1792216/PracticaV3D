@@ -941,7 +941,7 @@ void CEntornV3DView::OnPaint()
 
 		// PLANTA (Inferior Esquerra)
 				// Definició de Viewport, Projecció i Càmara
-		Projeccio_Orto(0, 0, w/2, h/2, OPV.R);
+		Projeccio_Orto(0, 0, w/2 -2, h/2 -2, OPV.R);
 		Vista_Ortografica(0, OPV.R, c_fons, col_obj, objecte, mida, front_faces, oculta,
 			test_vis, back_line, ilumina, llum_ambient, llumGL, ifixe, ilum2sides, eixos, grid, hgrid);
 		// Dibuix de l'Objecte o l'Escena
@@ -953,7 +953,7 @@ void CEntornV3DView::OnPaint()
 		
 		// ISOMÈTRICA (Inferior Dreta)
 				// Definició de Viewport, Projecció i Càmara
-				Projeccio_Orto(w/2, 0, w/2, h/2, OPV.R);
+				Projeccio_Orto(w/2 +2, 0, w/2 -2, h/2 -2, OPV.R);
 				Vista_Ortografica(3, OPV.R, c_fons, col_obj, objecte, mida, front_faces, oculta,
 					test_vis, back_line, ilumina, llum_ambient, llumGL, ifixe, ilum2sides,eixos, grid, hgrid);
 				// Dibuix de l'Objecte o l'Escena
@@ -965,7 +965,7 @@ void CEntornV3DView::OnPaint()
 
 		// ALÇAT (Superior Esquerra)
 				// Definició de Viewport, Projecció i Càmara
-				Projeccio_Orto(0, h/2, w/2, h/2, OPV.R);
+				Projeccio_Orto(0, h/2 +2, w/2 -2, h/2, OPV.R);
 				Vista_Ortografica(1, OPV.R, c_fons, col_obj, objecte, mida, front_faces, oculta,
 					test_vis, back_line, ilumina, llum_ambient, llumGL, ifixe, ilum2sides, eixos, grid, hgrid);
 				// Dibuix de l'Objecte o l'Escena
@@ -977,7 +977,7 @@ void CEntornV3DView::OnPaint()
 
 		// PERFIL (Superior Dreta)
 				// Definició de Viewport, Projecció i Càmara
-				Projeccio_Orto(w/2, h/2, w/2, h/2, OPV.R);
+				Projeccio_Orto(w/2 +2 , h/2 +2, w/2 -2, h/2, OPV.R);
 				Vista_Ortografica(2, OPV.R, c_fons, col_obj, objecte, mida, front_faces, oculta,
 					test_vis, back_line, ilumina, llum_ambient, llumGL, ifixe, ilum2sides, eixos, grid, hgrid);
 				// Dibuix de l'Objecte o l'Escena
