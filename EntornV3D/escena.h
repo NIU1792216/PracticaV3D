@@ -41,4 +41,10 @@ void Canon();
 void Cuerpo();
 void Cabina();
 
+// Entorn V3D: Respall de dents - Objecte de la practica 2.
+void cepillo();
+void mango();
+void cabeza();
+void cerdas();
+
 #endif

@@ -190,13 +190,14 @@
 #define ID_OBJECTE_ESCENA_LOXODROMA     32864
 #define ID_PROJECCIO_ORTOGRAFICA        32866
 #define ID_PROJECCIO_AXONOMETRICA       32868
+#define ID_OBJECTE_RESPALL              32869
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        313
-#define _APS_NEXT_COMMAND_VALUE         32869
+#define _APS_NEXT_COMMAND_VALUE         32870
 #define _APS_NEXT_CONTROL_VALUE         1000
 #define _APS_NEXT_SYMED_VALUE           310
 #endif

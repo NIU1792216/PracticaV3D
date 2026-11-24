@@ -62,6 +62,10 @@ void dibuixa_EscenaGL(char objecte, CColor col_object, bool ref_mat, bool sw_mat
 		tie();
 		break;
 
+	case RESPALL:
+		cepillo();
+		break;
+
 // Dibuix del Truck
 	case TRUCK:
 		glDisable(GL_TEXTURE_2D);
@@ -1565,3 +1569,25 @@ void Cabina()
 	glPopMatrix();
 }
 // FI OBJECTE TIE: FETS PER ALUMNES -----------------------------------------------------------------
+
+// INICI OBJECTE RESPALL: PRACTICA 2 --------------------------------------------------------------
+void cepillo() {
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	mango();
+	cabeza();
+	glDisable(GL_BLEND);
+	cerdas();
+}
+void mango() {
+	// Part inferior
+	glPushMatrix();
+	glColor4f(1.0f, 1.0f, 1.0f, 0.5f);
+	glTranslated(0.0f, 0.0f, 0.0f);
+	glRotated(0.0f, 0.0f, 0.0f, 0.0f);
+	glScaled(0.5f, 1.5f, 10.0f);
+	glutSolidCube(1.0f);
+	glPopMatrix();
+}
+void cabeza() {}
+void cerdas() {}

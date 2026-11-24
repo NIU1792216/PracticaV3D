@@ -44,6 +44,7 @@
 #define HIDROAVIO 'H'
 #define TETERA 't'
 #define TIE 'I'
+#define RESPALL 'r'
 #define TRUCK 'T'
 #define VAIXELL 'v'
 #define OBJ3DS '3'		// Objecte format 3DS

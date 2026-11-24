@@ -18,7 +18,7 @@ double aspecte = (float)w/(float)h;
 glOrtho(-Raux*aspecte, Raux*aspecte, -Raux, Raux, -p_far, p_far);
 gluLookAt(0., 0., Raux, 0., 0., 0., -1., 0., 0.)
 ```
-
+On Raux depén del tamany de l'objecte a visualitzar. en el nostre cas `Raux= 10`.
 ## Pregunta 2
 De la figura 16, la vista B, justifica com has calculat el vector tangent v de la càmera?
 

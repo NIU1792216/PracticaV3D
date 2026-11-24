@@ -255,7 +255,12 @@ void Projeccio_Orto(int minx,int miny,GLsizei w,GLsizei h, GLfloat Raux)
 
 	double aspecte = (float)w / (float)h;
 
-	glOrtho(-Raux*aspecte, Raux*aspecte, -Raux, Raux, -p_far, p_far);
+	if (w > h) {
+		glOrtho(-Raux * aspecte, Raux * aspecte, -Raux, Raux, -p_far, p_far);
+	}
+	else {
+		glOrtho(-Raux, Raux, -Raux/aspecte, Raux/aspecte, -p_far, p_far);
+	}
 
 	// Activació matriu MODELVIEW (tancar matriu PROJECTION)
 	glMatrixMode(GL_MODELVIEW);

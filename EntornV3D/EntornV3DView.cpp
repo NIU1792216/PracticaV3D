@@ -205,6 +205,8 @@ BEGIN_MESSAGE_MAP(CEntornV3DView, CView)
 		ON_UPDATE_COMMAND_UI(ID_PROJECCIO_ORTOGRAFICA, &CEntornV3DView::OnUpdateProjeccioOrtografica)
 		ON_COMMAND(ID_PROJECCIO_AXONOMETRICA, &CEntornV3DView::OnProjeccioAxonometrica)
 		ON_UPDATE_COMMAND_UI(ID_PROJECCIO_AXONOMETRICA, &CEntornV3DView::OnUpdateProjeccioAxonometrica)
+		ON_COMMAND(ID_OBJECTE_RESPALL, &CEntornV3DView::OnObjecteRespall)
+		ON_UPDATE_COMMAND_UI(ID_OBJECTE_RESPALL, &CEntornV3DView::OnUpdateObjecteRespall)
 		END_MESSAGE_MAP()
 
 // Construcción o destrucción de CEntornV3DView
@@ -4765,6 +4767,21 @@ void CEntornV3DView::OnUpdateObjectePaisatge(CCmdUI* pCmdUI)
 	if (objecte == PAISATGE) pCmdUI->SetCheck(1);
 	else pCmdUI->SetCheck(0);
 }
+
+void CEntornV3DView::OnObjecteRespall()
+{
+	// TODO: Agregue aquí su código de controlador de comandos
+	objecte = RESPALL;
+	InvalidateRect(NULL, false);
+}
+
+void CEntornV3DView::OnUpdateObjecteRespall(CCmdUI* pCmdUI)
+{
+	// TODO: Agregue aquí su código de controlador de IU para actualización de comandos
+	if (objecte == RESPALL) pCmdUI->SetCheck(1);
+	else pCmdUI->SetCheck(0);
+}
+
 
 /* ------------------------------------------------------------------------- */
 /*					8. TRANSFORMA											 */
